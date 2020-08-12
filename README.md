@@ -16,5 +16,12 @@
  Safe Area comes in handy when you are not using an app bar.
  An appBar is advantageous since it brings the content down automatially.
 
+```
+**Routing in flutter**
+```
+(a)Routes in flutter are a MAP with a key value pair of the url they redirect and function that
+returns the widget they are redirecting to taking context object as a parameter.
+
+context helps the widget in knowing where they are in the tree.
 
 ```
