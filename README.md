@@ -43,7 +43,7 @@ More on managing the routes is going to be looked at
 
 )
 
-
+```
 **LifeCycle Methods**
 
 ```
@@ -59,6 +59,37 @@ class and as well add a method of our own.
 the state.
 
 When fetching data from a third party API initState life cycle method is perfect to make an initial fetch of the data.
+
+
+```
+
+**Asynchronous code in flutter**
+```
+(a)Asynchronous code represents an action that starts now and finishes sometime in the future.Example when we are getting data from an API.
+
+We start a request but it may take a minute or two to complete that particular request.In the meantime our code should not stop unitil that
+request is complete.
+
+The best advantage of asynchronous code is that it is NON-BLOCKING ..This means that the rest of our program may continue to execute as we await
+for our promise.
+
+It does not block the rest of the code from continuing to execute.
+
+Componets of async in flutter
+(a)Asynchronous function
+(b)Await KeyWord
+(c)Futures->type of data very similar to promises in javascript
+
+By default an asynchronous code does not wait for data to be returned..However there may be instances
+where we may need it to wait.There may be instances where we do not want to proceed with the second
+request before the First has finished.(Where we may need a parameter from request (a) and it is being used in
+request (b).This is where we use async await.
+
+Data returned from a server always comes in form of a String.
+ InitState is very similar to componentDidMount in React.
+
+
+
 
 
 ```
