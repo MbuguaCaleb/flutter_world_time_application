@@ -44,6 +44,24 @@ More on managing the routes is going to be looked at
 )
 
 
+**LifeCycle Methods**
+
+```
+(a)Overriding a method means that we can go ahead an inherit its functionality from the Parent
+class and as well add a method of our own.
+
+(b)super makes a reference to our parent class when called from within the child class.
+(c)Remember that i use child whenever i want to nest a widget in the inside of another widget.'
+
+(d)Whenever i do call setState() to update the state in the stateful widget is triggers the build method.
+
+(e)initState runs only once at the very start when we create the StateObject.Only the build reruns as we change
+the state.
+
+When fetching data from a third party API initState life cycle method is perfect to make an initial fetch of the data.
+
+
+```
 ```
 
 **Notes by**
