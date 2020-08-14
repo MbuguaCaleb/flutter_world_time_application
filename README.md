@@ -88,11 +88,36 @@ request (b).This is where we use async await.
 Data returned from a server always comes in form of a String.
  InitState is very similar to componentDidMount in React.
 
-
-
-
-
 ```
+
+**Flutter Packages**
+```
+
+(a)Packages are bundles of logic that other programmers have graciously written and which help you in simplifying
+your work.
+
+Eg DatePicker Package.The Http package for instance helps us handle http requests from 3rd Party API(s)
+
+The flutter url for packages is https://pub.dev/flutter/packages.
+
+(b)Response Object
+
+Response response = await get('https://jsonplaceholder.typicode.com/todos/1');
+
+The Response Object is given to us by the http module.It contains
+information that we get from the request.
+Remember flutter is a strict type programming Language.
+
+(c)Remember that a Map is an object in Flutter.Remember that the data that is returned from a server
+is in JSON String Format.Remember this is how i get data from a Map.
+   print(data['title']);
+
+
+
+
+
+
+
 ```
 
 **Notes by**
