@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
-import 'dart:convert';
+import 'package:flutter_world_time_application/services/world_time.dart';
 
 
 class Loading extends StatefulWidget {
@@ -8,33 +7,30 @@ class Loading extends StatefulWidget {
   _LoadingState createState() => _LoadingState();
 }
 
-    class _LoadingState extends State<Loading> {
+class _LoadingState extends State<Loading> {
 
-    void getData() async{
-    Response response = await get('https://jsonplaceholder.typicode.com/albums/1');
-    /*converting it from a string to an object that we can be able to use*/
-    /*This is because i have imported dart convert*/
-    /*Therefore a Map is going to be returned*/
-    /*When i say JSON Decode i am normally converting a String to an Object*/
-    Map data =jsonDecode(response.body);
-    print(data);
-    print(data['title']);
+  String time ='loading';
 
-
-
-
-
+  void setupWorldTime() async{
+    WorldTime instance = WorldTime(location: 'Kenya',flag:"kenya.png",url:'Africa/Nairobi');
+    await instance.getTime();
+    print(instance.time);
+    setState(() {
+      time = instance.time;
+    });
   }
-
   @override
   void initState() {
     super.initState();
-    getData();
+    setupWorldTime() ;
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('loading screen'),
+      body: Padding(
+       padding: EdgeInsets.all(50.0),
+        child: Text(time),
+      ),
     );
   }
 }
