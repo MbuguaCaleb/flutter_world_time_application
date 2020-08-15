@@ -112,8 +112,9 @@ Remember flutter is a strict type programming Language.
 is in JSON String Format.Remember this is how i get data from a Map.
    print(data['title']);
 
+(d)PARSE CONVERTS DATA FROM STRING TO AN OBJECT ...ALSO JSON DECODE
 
-
+(e)Substring in flutter is like string format in javascript.
 
 
 
