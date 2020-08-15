@@ -116,11 +116,25 @@ is in JSON String Format.Remember this is how i get data from a Map.
 
 (e)Substring in flutter is like string format in javascript.
 
+```
+**World Time Class**
+
+```
+(a)Classes help in the making of my code more cleaner.When you want to reuse something many times example if there is a widget that you
+will be calling over and over again .It is better to use a class.
+
+(b)Whenever you are planning to use data from an asynchronous api call you should use await ...otherwise it shall return null since asynchronous does not
+stop the code from running.
+
+(c)Flutter is more like java in returning specific types...Eg before declaring an object declare Map.Other types are String , Int and  Future when expecting
+data from an asynchronous function.
+
+  Future is the declaration for an async type function .
+  A future is just like a promise in javascript it is a place holder function until a function is complete.
 
 
 
 ```
-
 **Notes by**
 ```
 Mbugua Caleb
