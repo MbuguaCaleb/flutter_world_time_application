@@ -162,6 +162,13 @@ Dart creates an object based oon the error.
 
    Retrieving
    data = ModalRoute.of(context).settings.arguments;
+```
+**Format Date and Time**
+```
+(a) Flutter intl package is used to format the date an time.
+(b)Remember that padding takes in EdgeInsets Property for alignment.
+(c)SizedBox property in flutter is like the <br> in html and css.
+(d)There is a difference between a property and a function.Properties are seaprated by a comma..while functions by ';'
 
 ```
 **Notes by**
