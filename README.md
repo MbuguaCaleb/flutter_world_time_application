@@ -171,6 +171,13 @@ Dart creates an object based oon the error.
 (d)There is a difference between a property and a function.Properties are seaprated by a comma..while functions by ';'
 
 ```
+
+**Flutter Spinner**
+```
+This is enhanced by a package called the flutter spi kit.
+
+
+``
 **Notes by**
 ```
 Mbugua Caleb
