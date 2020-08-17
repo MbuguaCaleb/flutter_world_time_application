@@ -141,7 +141,27 @@ We execute it in the except block.
 
 Dart creates an object based oon the error.
 
-Incase you had set an
+```
+
+**Redirecting data to another route**
+```
+(a) Navigator.pushReplacementNamed(context, '/home');
+    Helps redirect to another route instead of putting each of them on the top
+    of one another.
+    PushNamed maps each route on top of each other.
+(b)Data passed from one route to the other must be fetched from the build method since this is
+   where we have context object where the data was passed from the other route.
+
+   The data is passed as arguments.
+   Passing Data
+    Navigator.pushReplacementNamed(context, '/home', arguments: {
+         'location':instance.location,
+         'flag':instance.flag,
+         'time':instance.time
+       });
+
+   Retrieving
+   data = ModalRoute.of(context).settings.arguments;
 
 ```
 **Notes by**
