@@ -131,8 +131,17 @@ data from an asynchronous function.
 
   Future is the declaration for an async type function .
   A future is just like a promise in javascript it is a place holder function until a function is complete.
+```
 
+**Flutter Try Catch Block**
 
+```
+It is for catching errors whereby we try to do something under the try block but in the case where what we are doing does fail
+We execute it in the except block.
+
+Dart creates an object based oon the error.
+
+Incase you had set an
 
 ```
 **Notes by**

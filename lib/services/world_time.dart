@@ -13,33 +13,34 @@ class WorldTime{
 
   /*Future is the declaration for an async type function */
   Future<void> getTime() async{
-    //make the request
-    Response response = await get('http://worldtimeapi.org/api/timezone/$url');
-    Map data = jsonDecode(response.body);
 
-    //get properties from data
-    String datetime = data['datetime'];
-    String offset = data['utc_offset'].substring(1,3);
+    try{
+      //make the request
+      Response response = await get('http://worldtimeapi.org/api/timezone/$url');
+      Map data = jsonDecode(response.body);
 
-    //print(datetime);
-    //print(offset);
+      //get properties from data
+      String datetime = data['datetime'];
+      String offset = data['utc_offset'].substring(1,3);
 
-    //Create a Datetime Object
-    DateTime now = DateTime.parse(datetime);
-    now =now.add(Duration(hours: int.parse(offset)));
+      //print(datetime);
+      //print(offset);
 
-    //set the time property
-    //Remember that iam converting it into a string because it was initially an object
-    time = now.toString();
+      //Create a Datetime Object
+      DateTime now = DateTime.parse(datetime);
+      now =now.add(Duration(hours: int.parse(offset)));
+
+      //set the time property
+      //Remember that iam converting it into a string because it was initially an object
+      time = now.toString();
+
+    }catch(e){
+      print('caught error: $e');
+      time = 'time data could not be set';
+    }
 
   }
 
-
   /*A class is like a function in terms of re usability but it can hold much much more*/
-
-
-
-
-
 
 }
