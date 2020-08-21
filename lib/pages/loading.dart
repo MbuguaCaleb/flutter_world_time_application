@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_world_time_application/services/world_time.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-
-
 class Loading extends StatefulWidget {
   @override
   _LoadingState createState() => _LoadingState();
