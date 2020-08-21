@@ -8,6 +8,7 @@ class WorldTime{
   String time; //the time in that location
   String flag; //url to an assets flag icon
   String url ;//the location url for API Endpoints
+  bool isDayTime; //true or false if daytime or not.
 
   //creating the constructor with named parameters
   WorldTime ({this.location, this.flag,this.url});
@@ -33,6 +34,10 @@ class WorldTime{
 
       //set the time property
       //format date via intl package
+
+      //ternary operator
+      isDayTime = now.hour > 6 && now.hour < 21 ? true : false;
+
       time = DateFormat.jm().format(now);
 
     }catch(e){

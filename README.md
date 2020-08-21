@@ -176,8 +176,28 @@ Dart creates an object based oon the error.
 ```
 This is enhanced by a package called the flutter spi kit.
 
+```
 
-``
+**Ternary Operator**
+
+```
+(a)setVariable = condition ? true :false
+(b)Remember that images in flutter are linked at the pubspec yaml file.
+(c)A boolean can be able to execute directly into a function based on whether it is true or false.
+(d)A decoration property helps you to input an image that fits directly into the  screen.
+
+the property takes in a BoxDecoration widget..
+(e)Style in a text is applied in a special way via the textStyle Property
+
+                     Text(
+                        data['location'],
+                        style: TextStyle(
+                          fontSize: 28.0,
+                          letterSpacing: 2.0
+                        ),
+                      ),
+
+```
 **Notes by**
 ```
 Mbugua Caleb
