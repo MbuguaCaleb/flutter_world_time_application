@@ -206,7 +206,29 @@ the property takes in a BoxDecoration widget..
 ListView is the most commonly used scrolling widget. It displays its children one after another in the scroll direction.
 In the cross axis, the children are required to fill the ListView.
 
+Whenever i Navigate or redirect to a route via Push...i must go back to it via popped..
+
+It is a simpler way of Navigating back.
+
+This happens mostly when you did not redirect to it by  Navigator.pushReplacementNamed() but rather via
+Navigator.pushNamed(context, '/location);
+
+Push Named just places it on top and its therefore easier to Navigate back.
+
+
 ```
+
+**Completion of the APP**
+
+```
+(a)Read the flutter cook  book and documentation for more insights.
+
+(b)Extend the APP functionality.
+
+(c)Understanding some Java..JavaScript Methods like async await as well as React Life Cycle methods comes in handy
+
+```
+
 **Notes by**
 ```
 Mbugua Caleb

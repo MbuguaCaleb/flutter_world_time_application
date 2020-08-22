@@ -20,6 +20,23 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldTime(url: 'Asia/Jakarta', location: 'Jakarta', flag: 'indonesia.png'),
   ];
 
+
+  /*function that updates the time */
+  /*It takes in the index of the items in the locations Lost*/
+  void updateTime(index) async{
+    WorldTime instance = locations[index];
+    /*Remember i am calling a FutureRustic Function */
+    await instance.getTime();
+
+
+    Navigator.pop(context, {
+      'location':instance.location,
+      'flag':instance.flag,
+      'time':instance.time,
+      'isDayTime': instance.isDayTime
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     print('buildState lifecycle method ran');
@@ -39,7 +56,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
            child: Card(
             child: ListTile(
               onTap: (){
-                print(locations[index].location);
+              updateTime(index);
               },
               title: Text(locations[index].location),
               leading:CircleAvatar(

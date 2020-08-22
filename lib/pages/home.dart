@@ -11,7 +11,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
 
-    data = ModalRoute.of(context).settings.arguments;
+    /*Ternary operator to separate a build from the loading screen and a pop
+    from choose location
+     */
+    data = data.isNotEmpty ? data: ModalRoute.of(context).settings.arguments;
     print(data);
 
     //set background
@@ -36,9 +39,19 @@ class _HomeState extends State<Home> {
               child: Column(
                 children: <Widget>[
                   FlatButton.icon(
-                      onPressed: (){
+                      onPressed: () async{
                         /*redirecting to another route*/
-                        Navigator.pushNamed(context, '/location');
+                        /*I am awaiting for something after i redirect to this screen*/
+                       dynamic result = await Navigator.pushNamed(context, '/location');
+                       /*updating the state after i get the data returned by pop*/
+                        setState(() {
+                          data ={
+                            'time':result['time'],
+                            'location':result['location'],
+                            'isDayTime': result['isDayTime'],
+                            'flag':result['flag']
+                          };
+                        });
                       },
                       icon: Icon(
                           Icons.edit_location,
