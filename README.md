@@ -196,6 +196,15 @@ the property takes in a BoxDecoration widget..
                           letterSpacing: 2.0
                         ),
                       ),
+ (f)A semi-colon is what marks the end of a return statement
+
+```
+
+**List View Widget**
+
+```
+ListView is the most commonly used scrolling widget. It displays its children one after another in the scroll direction.
+In the cross axis, the children are required to fill the ListView.
 
 ```
 **Notes by**
